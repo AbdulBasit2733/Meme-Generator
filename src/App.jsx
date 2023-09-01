@@ -15,7 +15,7 @@ function App() {
         Meme Generator
       </h1>
       <div>
-        <Container>
+        <Container className=" m-auto justify-center content-center items-center">
           <Row>
             <Col xl>
               <Routes>
