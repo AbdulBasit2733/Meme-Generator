@@ -20,6 +20,7 @@ function App() {
             <Col xl>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/Meme-Generator" element={<HomePage />} />
                 <Route path="/edit" element={<EditPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />

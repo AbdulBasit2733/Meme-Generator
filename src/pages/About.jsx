@@ -12,7 +12,7 @@ const About = () => {
           </p>
           <ul className=" list-outside list-decimal ml-10 mt-3 text-left">
             <li>Python</li>
-            <li>Java</li>
+            <li>React js and Redux</li>
             <li>JavaScript</li>
           </ul>
         </div>
