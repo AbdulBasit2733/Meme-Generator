@@ -22,3 +22,5 @@ const TextEditor = ({ editMode, val, setEditMode, setVal, textColor }) => {
   );
 };
 export default TextEditor
+
+
