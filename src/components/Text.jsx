@@ -1,20 +1,35 @@
 import { useState } from "react";
-import Draggable from "react-draggable";
+import TextEditor from "./TextEditor";
+import ChangeTextColor from "./ChangeTextColor";
 
 const Text = () => {
-
     const [editMode, setEditMode] = useState(false);
+    const [textColor, setTextColor] = useState(null);
     const [val, setVal] = useState("Double Click To Edit");
-
-    // Double CLick Listener
+  
+    const getColor = (color) => {
+      setTextColor(color);
+    };
+  
     return (
-        <Draggable>
-        {
-            editMode ? <input className=" m-auto" onDoubleClick={e =>setEditMode(false)} value={val} onChange={e => setVal(e.target.value)} /> : <h1 className=" text-3xl" onDoubleClick={e => setEditMode(true)}>{val}</h1>
-        }
-        </Draggable>
-    )
-};
+      <>
+        <label>
+          Enter Text:
+          <TextEditor
+            editMode={editMode}
+            val={val}
+            setEditMode={setEditMode}
+            setVal={setVal}
+            textColor={textColor}
+          />
+        </label>
+        <label className="flex justify-items-start content-center">
+          Change Color:
+          <ChangeTextColor getColor={getColor} />
+        </label>
+      </>
+    );
+  };
 
-
-export default Text;
+  export default Text;
+  
